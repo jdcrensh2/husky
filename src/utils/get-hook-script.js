@@ -72,7 +72,7 @@ module.exports = function getHookScript(hookName, relativePath, npmScriptName) {
       # OS X and Linux only
       run_nvm () {
         # If nvm has been loaded correctly, use project .nvmrc
-        command_exists nvm && [ -f .nvmrc ] && nvm use
+        command_exists nvm && [ -f .nvmrc ] && nvm use > /dev/null
       }
 
       cd "${normalizedPath}"
